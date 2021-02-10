@@ -11,7 +11,7 @@ def keyword_extractor(text):
   keywords_list = []
   custom_kw_extractor = yake.KeywordExtractor(lan='en', n=3, dedupLim=0.9, dedupFunc='segm', windowsSize=1, top=80, features=None)
   keywords = custom_kw_extractor.extract_keywords(text)
-  for keyword, percentage in keywords:
+  for percentage, keyword in keywords:
     keywords_list.append(keyword)
   return keywords_list
 
